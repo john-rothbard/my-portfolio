@@ -3,11 +3,9 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="w-full max-w-[800px] mx-auto mx-8 mt-6 px-6 py-4
-             bg-[#022F1F]
-             border border-[#004D32]
-             rounded-xl
-             flex items-center justify-between">
+    <nav className="fixed top-6 left-3 right-4 z-50 max-w-[800px] mx-auto 
+    bg-white/30 backdrop-blur-sm border border-white/100 
+    rounded-0xl flex items-center justify-between px-6 py-4 shadow-md">
 
       
       {/* Logo */}
