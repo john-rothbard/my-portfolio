@@ -17,6 +17,7 @@ export default function ProjectModal({ project, onClose }) {
             <div
                 onClick={stop}
                 className="
+          overflow-x-hidden
           bg-black/90 text-gray
           border-6 border-white/50
           p-6
@@ -29,9 +30,10 @@ export default function ProjectModal({ project, onClose }) {
 
           overflow-y-auto
 
-          w-[min(800px,90%)]
-          h-[min(600px,90%)]
+          w-[75vw]
+          h-[90vh]
 
+          max-[600px]:rounded-none
           max-[600px]:rounded-t-2xl
           max-[600px]:top-[5vh]
           max-[600px]:left-0
@@ -40,7 +42,7 @@ export default function ProjectModal({ project, onClose }) {
           max-[600px]:w-full
           max-[600px]:max-h-[90vh]
           max-[600px]:h-auto
-          max-[600px]:border-2
+          max-[600px]:border-0
           max-[600px]:p-4
           max-[600px]:overflow-y-auto
           flex flex-col 
@@ -65,6 +67,8 @@ export default function ProjectModal({ project, onClose }) {
                 </div>
 
                 <div className="-mx-6 border-t border-white/20 my-2" />
+                <div className="-mx-6 border-t border-white/20 my-0" />
+
 
                 {/* CONTENT */}
                 <div className="space-y-8 pb-20">

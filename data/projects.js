@@ -4,7 +4,7 @@ const projects = [
     {
       id: "seismic",
       title: "0-1 Seismic Simulations",
-      image: "/placeholder.jpeg",
+      image: "/simsscreenshot.png",
       description: `
         I worked in dedicated team to build an enterprise-grade software application for KPFF, an engineering firm.
         I was the head of the UI/UX, as well as backend work for camera implementation and data graphing.

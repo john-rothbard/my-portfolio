@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-6 left-3 right-4 z-50 max-w-[800px] mx-auto 
+    <nav className="fixed top-6 left-3 right-4 z-50 max-w-[800px] mx-auto
     bg-white/30 backdrop-blur-sm border border-white/100 
-    rounded-0xl flex items-center justify-between px-6 py-4 shadow-md">
+    rounded-2xl flex items-center justify-between px-6 py-4 shadow-md">
 
       
       {/* Logo */}
@@ -21,9 +21,9 @@ export default function Navbar() {
       </div>
 
       {/* Links */}
-      <div className="flex gap-5 text-l text-white">
+      <div className="flex gap-4 text-xl font-light text-white">
         <a href="/projects" className="hover:underline">Projects</a>
-        <a href="/about" className="hover:underline">About me</a>
+        <a href="/sheep" className="hover:underline">About me</a>
         <a href="/contact" className="hover:underline">Contact</a>
       </div>
     </nav>
