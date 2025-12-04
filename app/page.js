@@ -48,7 +48,7 @@ export default function Home() {
               Hey! I'm John.
             </h1>
 
-            
+
 
 
             {/* Paragraph ON DESKTOP */}
@@ -58,38 +58,35 @@ export default function Home() {
               is to create something that benefits the world, and then create another,
               and another.
             </p>
-            <Link href="/contact" className="text-xl font-thin text-gray-800">
-            Let's connect -------{'>'}
-            </Link>
           </div>
         </div>
 
         {/* BLURBS FOR MOBILE ONLY */}
-<div className="flex flex-col items-left gap-3 mt-4 md:hidden">
+        <div className="flex flex-col items-left gap-3 mt-4 md:hidden">
 
-{/* Software Developer */}
-<div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[220px] w-max">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-  </svg>
-  Software Developer
-</div>
+          {/* Software Developer */}
+          <div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[220px] w-max">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+            </svg>
+            Software Developer
+          </div>
 
-{/* LA-Based */}
-<div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[180px] w-max">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22s7-7.117 7-12a7 7 0 10-14 0c0 4.883 7 12 7 12z" />
-  </svg>
-  LA-Based
-</div>
+          {/* LA-Based */}
+          <div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[180px] w-max">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22s7-7.117 7-12a7 7 0 10-14 0c0 4.883 7 12 7 12z" />
+            </svg>
+            LA-Based
+          </div>
 
-{/* Open for work */}
-<div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[160px] w-max">
-  Open for work
-</div>
+          {/* Open for work */}
+          <div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[160px] w-max">
+            Open for work
+          </div>
 
-</div>
+        </div>
 
 
         {/* Paragraph ON MOBILE */} {/*Need to fix this, this is redundant.*/}
@@ -120,7 +117,7 @@ export default function Home() {
       </div>
 
       {/* WORKS SECTION */}
-      <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 py-20 mt-10">
+      <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10">
 
         <h2 className="text-xl mb-4 text-gray-700">
           Please consider the following:
@@ -131,7 +128,7 @@ export default function Home() {
             <div
               key={i}
               onClick={() => setActiveProject(proj)}
-              className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer transition-transform duration-300 hover:scale-[0.99]"
+              className="relative w-full h-[250px] sm:h-[350px] lg:h-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer transition-transform duration-300 hover:scale-[0.99]"
             >
               <Image
                 src={proj.image}
@@ -140,19 +137,22 @@ export default function Home() {
                 className="object-cover"
               />
 
-
-              <div className="absolute bottom-0 left-0 w-full h-[30%] bg-blue-400 flex items-center px-4">
+              {/* Overlay with title and subheading */}
+              <div className="absolute bottom-0 left-0 w-full h-[30%] bg-blue-400 flex flex-col justify-center px-6">
                 <p className="text-white text-xl font-semibold">{proj.title}</p>
+                <p className="text-white-600 text-sm">2025</p>
+                <p className="text-white text-sm mt-2 hidden md:block">{proj.subtitle}</p> {/* new subheading */}
               </div>
             </div>
           ))}
         </div>
 
+
         <div className="relative z-30 max-w-[800px] mx-auto px-0 py-8 flex flex-col md:flex-row gap-3 justify-left">
 
           {/*BOTTOM SECTION*/}
           <a
-            href="/projects"
+            href="/work"
             className="bg-blue-600 text-white text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-blue-700 transition"
           >
             See all work
@@ -168,53 +168,53 @@ export default function Home() {
 
         </div>
 
-        
-      {/* email */}
-      <div className="flex items-center gap-2 justify-center md:justify-start mt-4">
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-700" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
-        </svg>
-        <h3 className="text-xl text-gray-900">
-          jbrothbard@gmail.com
-        </h3>
-      </div>
+
+        {/* email */}
+        <div className="flex items-center gap-2 justify-center md:justify-start mt-4">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-700" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+          </svg>
+          <h3 className="text-xl text-gray-900">
+            jbrothbard@gmail.com
+          </h3>
+        </div>
 
 
         <div className="-mx-6 border-t border-white/20 my-5" />
 
 
-  <div className="relative z-30 w-full max-w-[800px] mx-auto py-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-4 text-gray-300">
+        <div className="relative z-30 w-full max-w-[800px] mx-auto py-5 pb-16 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-4 text-gray-300">
 
-{/* copyright */}
-<div className="flex items-center gap-2 text-m text-white">
-  <span>Built by John Rothbard with Next.js and Tailwind</span>
-</div>
+          {/* copyright */}
+          <div className="flex items-center gap-2 text-m text-white">
+            <span>Built by John Rothbard with Next.js and Tailwind</span>
+          </div>
 
-{/* icon linkd */}
-<div className="flex items-center gap-4">
-  {/* github */}
-  <a href="https://github.com/john-rothbard" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-      <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.3-5.467-1.334-5.467-5.933 0-1.31.468-2.381 1.235-3.222-.123-.303-.536-1.522.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.654.242 2.873.12 3.176.77.841 1.233 1.912 1.233 3.222 0 4.61-2.807 5.63-5.48 5.923.43.371.813 1.102.813 2.222v3.293c0 .322.217.694.825.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z"/>
-    </svg>
-  </a>
+          {/* icon linkd */}
+          <div className="flex items-center gap-4">
+            {/* github */}
+            <a href="https://github.com/john-rothbard" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.3-5.467-1.334-5.467-5.933 0-1.31.468-2.381 1.235-3.222-.123-.303-.536-1.522.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.654.242 2.873.12 3.176.77.841 1.233 1.912 1.233 3.222 0 4.61-2.807 5.63-5.48 5.923.43.371.813 1.102.813 2.222v3.293c0 .322.217.694.825.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
 
-  {/* resume */}
-  <Link href="/resume" className="hover:opacity-80 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-      <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm0 2v18h12V8h-5V3H6z"/>
-    </svg>
-  </Link>
+            {/* resume */}
+            <Link href="/resume" className="hover:opacity-80 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm0 2v18h12V8h-5V3H6z" />
+              </svg>
+            </Link>
 
-  {/* linkedin */}
-  <a href="https://linkedin.com/in/johnrothbard" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.801-1.08 2.093-1.5 3.25-1.5 2.481 0 4.5 2.019 4.5 4.5v5.5z"/>
-    </svg>
-  </a>
-</div>
+            {/* linkedin */}
+            <a href="https://linkedin.com/in/johnrothbard" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.801-1.08 2.093-1.5 3.25-1.5 2.481 0 4.5 2.019 4.5 4.5v5.5z" />
+              </svg>
+            </a>
+          </div>
 
-</div>
+        </div>
       </div>
 
 

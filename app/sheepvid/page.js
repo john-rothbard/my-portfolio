@@ -4,28 +4,30 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-
-    <div className="relative h-screen w-full font-sans">
-      {/* Top 70% - blue */}
-      {/*<div className="absolute top-0 left-0 w-full h-[70vh] bg-[rgb(186,188,191)]"></div>*/}
-
-      {/* Bottom 30% - sheep video */}
-      <div className="relative h-screen w-full font-sans">
+    <div className="relative h-screen w-full font-sans overflow-hidden">
+      
+      {/* video bg */}
       <SheepVideo />
-      {/* Image overlay and main heading stay here */}
-      </div>
 
-      <Link
-        href="/sheep"
-        className="px-4 py-2 bg-blue-500 text-white rounded"
-      >
-        Go to Page 2
-      </Link>
-      <main className="absolute top-55 left-0 w-full flex flex-col items-end justify-center px-24">
+      {/* blur */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/20 backdrop-blur-md"></div>
+
+      <main className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 text-center">
         <h1 className="text-3xl font-semibold leading-10 tracking-tight text-[rgb(100,100,300)]">
-            Site in progress. Carry on lad.
+          Let's keep on going.
         </h1>
       </main>
+
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <Link
+          href="/sheep"
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Go to Page 2
+        </Link>
+      </div>
     </div>
   );
 }
+
+

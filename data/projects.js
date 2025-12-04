@@ -3,7 +3,8 @@
 const projects = [
     {
       id: "seismic",
-      title: "0-1 Seismic Simulations",
+      title: "Earthquake Sim",
+      subtitle:"Developed a 0-1 enterprise application.",
       image: "/simsscreenshot.png",
       description: `
         I worked in dedicated team to build an enterprise-grade software application for KPFF, an engineering firm.
@@ -20,7 +21,8 @@ const projects = [
   
     {
       id: "songvert",
-      title: "Music Streaming Song Converter",
+      title: "Song Converter",
+      subtitle:"Spotify -> Soundcloud Fuzzy Finder.",
       image: "/placeholder.jpeg",
       description: `
         Safari extension + iOS app that converts any Apple Music link to the
@@ -32,7 +34,39 @@ const projects = [
         "Runs fully on-device"
       ],
       gallery: ["/songvert.png"],
-    }
+    },
+
+    {
+        id: "testing",
+        title: "Hamburger Helper Developer",
+        image: "/placeholder.jpeg",
+        description: `
+          Safari extension + iOS app that converts any Apple Music link to the
+          equivalent Spotify track using fuzzy search and API lookups.
+        `,
+        bullets: [
+          "Built with Swift + MusicKit",
+          "Fuzzy matching between AM ↔ Spotify",
+          "Runs fully on-device"
+        ],
+        gallery: ["/songvert.png"],
+      },
+
+      {
+        id: "testing2",
+        title: "Euthanasia",
+        image: "/placeholder.jpeg",
+        description: `
+          Safari extension + iOS app that converts any Apple Music link to the
+          equivalent Spotify track using fuzzy search and API lookups.
+        `,
+        bullets: [
+          "Built with Swift + MusicKit",
+          "Fuzzy matching between AM ↔ Spotify",
+          "Runs fully on-device"
+        ],
+        gallery: ["/songvert.png"],
+      }
   ];
   
   export default projects;

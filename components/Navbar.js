@@ -22,8 +22,7 @@ export default function Navbar() {
 
       {/* Links */}
       <div className="flex gap-4 text-xl font-light text-white">
-        <a href="/projects" className="hover:underline">Projects</a>
-        <a href="/sheep" className="hover:underline">About me</a>
+        <a href="/work" className="hover:underline">Work</a>
         <a href="/contact" className="hover:underline">Contact</a>
       </div>
     </nav>
