@@ -23,7 +23,7 @@ const projects = [
       id: "songvert",
       title: "Song Converter",
       subtitle:"Spotify -> Soundcloud Fuzzy Finder.",
-      image: "/placeholder.jpeg",
+      image: "/simsscreenshot.png",
       description: `
         Safari extension + iOS app that converts any Apple Music link to the
         equivalent Spotify track using fuzzy search and API lookups.
@@ -37,25 +37,24 @@ const projects = [
     },
 
     {
-        id: "testing",
-        title: "Hamburger Helper Developer",
-        image: "/placeholder.jpeg",
+        id: "weathermap",
+        title: "Weather Map",
+        image: "/simsscreenshot.png",
         description: `
-          Safari extension + iOS app that converts any Apple Music link to the
-          equivalent Spotify track using fuzzy search and API lookups.
+          Java application full-stack weather map.
         `,
         bullets: [
-          "Built with Swift + MusicKit",
-          "Fuzzy matching between AM ↔ Spotify",
-          "Runs fully on-device"
+          "Built with Spring Boot and Java",
+          "PostgreSQL for the backend, openweathermap API, React for the frontend",
+          "Full-stack Realtime Java Application."
         ],
-        gallery: ["/songvert.png"],
+        gallery: ["/weathermap.png"],
       },
 
       {
         id: "testing2",
         title: "Euthanasia",
-        image: "/placeholder.jpeg",
+        image: "/simsscreenshot.png",
         description: `
           Safari extension + iOS app that converts any Apple Music link to the
           equivalent Spotify track using fuzzy search and API lookups.

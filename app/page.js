@@ -20,7 +20,8 @@ export default function Home() {
   return (
 
 
-    <div className="relative min-h-screen w-full flex flex-col bg-my-gradient overflow-x-hidden">
+    <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden transition-colors duration-200"
+    style={{background: "var(--page-bg)"}}>
 
 
       {/* HI AND ABOUT ME */}
@@ -44,7 +45,7 @@ export default function Home() {
           <div className="flex-1 flex flex-col">
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-4xl font-bold text-gray-700 mb-2">
+            <h1 className="text-4xl md:text-4xl font-bold text-[var(--color-text)] mb-2 transition-colors duration-200">
               Hey! I'm John.
             </h1>
 
@@ -52,7 +53,7 @@ export default function Home() {
 
 
             {/* Paragraph ON DESKTOP */}
-            <p className="hidden md:block text-xl text-gray-700">
+            <p className="hidden md:block text-xl text-[var(--color-muted)]">
               I'm a software developer who's wildly interested in all things tech.
               I especially love the creative intersections of code and art. My dream
               is to create something that benefits the world, and then create another,
@@ -65,7 +66,7 @@ export default function Home() {
         <div className="flex flex-col items-left gap-3 mt-4 md:hidden">
 
           {/* Software Developer */}
-          <div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[220px] w-max">
+          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-muted)] text-sm font-medium max-w-[220px] w-max">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
             </svg>
@@ -73,7 +74,7 @@ export default function Home() {
           </div>
 
           {/* LA-Based */}
-          <div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[180px] w-max">
+          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-muted)] text-sm font-medium max-w-[180px] w-max">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22s7-7.117 7-12a7 7 0 10-14 0c0 4.883 7 12 7 12z" />
@@ -82,7 +83,7 @@ export default function Home() {
           </div>
 
           {/* Open for work */}
-          <div className="flex items-center gap-2 px-3 py-1 bg-purple-200/100 rounded-md text-gray-700 text-sm font-medium max-w-[160px] w-max">
+          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-muted)] text-sm font-medium max-w-[160px] w-max">
             Open for work
           </div>
 
@@ -91,8 +92,8 @@ export default function Home() {
 
         {/* Paragraph ON MOBILE */} {/*Need to fix this, this is redundant.*/}
         <br></br>
-        <h2 className="block md:hidden text-lg text-gray-800 font-bold">About me</h2>
-        <p className="block md:hidden text-xl text-gray-700 mt-3">
+        <h2 className="block md:hidden text-lg text-[var(--color-text)] font-bold">About me</h2>
+        <p className="block md:hidden text-xl text-[var(--color-muted)] mt-3">
           I'm a software developer who's wildly interested in all things tech.
           I especially love the creative intersections of code and art. My dream
           is to create something that benefits the world, and then create another,
@@ -119,7 +120,7 @@ export default function Home() {
       {/* WORKS SECTION */}
       <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10">
 
-        <h2 className="text-xl mb-4 text-gray-700">
+        <h2 className="text-xl mb-4 text-[var(--color-text)]">
           Please consider the following:
         </h2>
 
@@ -128,7 +129,7 @@ export default function Home() {
             <div
               key={i}
               onClick={() => setActiveProject(proj)}
-              className="relative w-full h-[250px] sm:h-[350px] lg:h-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer transition-transform duration-300 hover:scale-[0.99]"
+              className="relative w-full h-[250px] sm:h-[350px] lg:h-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer transition-transform duration-300 hover:scale-[0.99] border border-[var(--color-border)]"
             >
               <Image
                 src={proj.image}
@@ -138,10 +139,10 @@ export default function Home() {
               />
 
               {/* Overlay with title and subheading */}
-              <div className="absolute bottom-0 left-0 w-full h-[30%] bg-blue-400 flex flex-col justify-center px-6">
-                <p className="text-white text-xl font-semibold">{proj.title}</p>
-                <p className="text-white-600 text-sm">2025</p>
-                <p className="text-white text-sm mt-2 hidden md:block">{proj.subtitle}</p> {/* new subheading */}
+              <div className="absolute bottom-0 left-0 w-full h-[30%] bg-[var(--color-card)] flex flex-col justify-center px-6 transition-colors duration-200">
+                <p className="text-[var(--color-text)] text-xl font-semibold">{proj.title}</p>
+                <p className="text-[var(--color-muted)] text-sm">2025</p>
+                <p className="text-[var(--color-muted)] text-sm mt-2 hidden md:block">{proj.subtitle}</p> {/* new subheading */}
               </div>
             </div>
           ))}
@@ -153,7 +154,7 @@ export default function Home() {
           {/*BOTTOM SECTION*/}
           <a
             href="/work"
-            className="bg-blue-600 text-white text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-blue-700 transition"
+            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
           >
             See all work
           </a>
@@ -161,7 +162,7 @@ export default function Home() {
           {/* More about me button */}
           <a
             href="/about"
-            className="bg-gray-200 text-gray-800 text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-gray-300 transition"
+            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
           >
             More about me
           </a>
@@ -170,11 +171,11 @@ export default function Home() {
 
 
         {/* email */}
-        <div className="flex items-center gap-2 justify-center md:justify-start mt-4">
+        <div className="flex items-center gap-2 justify-center md:justify-start mt-4 text-[var(--color-muted)]">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-700" viewBox="0 0 24 24" fill="currentColor">
             <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
           </svg>
-          <h3 className="text-xl text-gray-900">
+          <h3 className="text-xl text-[var(--color-text)]">
             jbrothbard@gmail.com
           </h3>
         </div>
@@ -186,12 +187,12 @@ export default function Home() {
         <div className="relative z-30 w-full max-w-[800px] mx-auto py-5 pb-16 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-4 text-gray-300">
 
           {/* copyright */}
-          <div className="flex items-center gap-2 text-m text-white">
+          <div className="flex items-center gap-2 text-m text-[var(--color-muted)]">
             <span>Built by John Rothbard with Next.js and Tailwind</span>
           </div>
 
           {/* icon linkd */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-[var(--color-accent)]">
             {/* github */}
             <a href="https://github.com/john-rothbard" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">

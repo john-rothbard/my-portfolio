@@ -19,7 +19,7 @@ export default function Home() {
     return (
 
 
-        <div className="relative min-h-screen w-full flex flex-col bg-my-gradient overflow-x-hidden">
+        <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden">
 
 
             {/*SHEEP*/}

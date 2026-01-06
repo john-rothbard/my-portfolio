@@ -8,6 +8,7 @@ import projects from "@/data/projects";
 
 
 
+
 export default function Home() {
     const [activeProject, setActiveProject] = useState(null);
 
@@ -19,7 +20,8 @@ export default function Home() {
     return (
 
 
-        <div className="relative min-h-screen w-full flex flex-col bg-my-gradient overflow-x-hidden">
+        <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden"
+        style={{background: "var(--page-bg)"}}>
 
 
             {/*SHEEP*/}
@@ -39,10 +41,10 @@ export default function Home() {
 
             {/* WORKS SECTION */}
             <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10">
-                <h2 className="text-4xl mb-2 font-bold text-gray-700">
+                <h2 className="text-4xl mb-2 font-bold text-[var(--color-text)]">
                     Work
                 </h2>
-                <h2 className="text-xl mb-4 text-gray-700">
+                <h2 className="text-xl mb-4 text-[var(--color-muted)]">
                     Please consider the following:
                 </h2>
 
@@ -52,7 +54,7 @@ export default function Home() {
             <div
               key={i}
               onClick={() => setActiveProject(proj)}
-              className="relative w-full h-[250px] sm:h-[350px] rounded-xl overflow-hidden shadow-lg cursor-pointer transition-transform duration-300 hover:scale-[0.99]"
+              className="relative w-full h-[250px] sm:h-[350px] rounded-xl overflow-hidden shadow-md cursor-pointer transition-transform duration-300 hover:scale-[0.99] border border-[var(--color-border)]"
             >
               <Image
                 src={proj.image}
@@ -62,10 +64,10 @@ export default function Home() {
               />
 
               {/* Overlay with title and subheading */}
-              <div className="absolute bottom-0 left-0 w-full h-[30%] bg-blue-400 flex flex-col justify-center px-6">
-                <p className="text-white text-xl font-semibold">{proj.title}</p>
-                <p className="text-white-600 text-sm">2025</p>
-                <p className="text-white text-sm mt-2 hidden md:block">{proj.subtitle}</p> {/* new subheading */}
+              <div className="absolute bottom-0 left-0 w-full h-[30%] bg-[var(--color-card)] flex flex-col justify-center px-6">
+                <p className="text-[var(--color-text)] text-xl font-semibold">{proj.title}</p>
+                <p className="text-[var(--color-muted)] text-sm">2025</p>
+                <p className="text-[var(--color-muted)] text-sm mt-2 hidden md:block">{proj.subtitle}</p> {/* new subheading */}
               </div>
             </div>
           ))}
@@ -77,7 +79,7 @@ export default function Home() {
                     {/*BOTTOM SECTION*/}
                     <a
                         href="/"
-                        className="flex-none block bg-blue-600 text-white text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-blue-700 transition"
+                        className="flex-none block bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-[var(--color-border)] transition"
                     >
                         Home
                     </a>
@@ -91,12 +93,12 @@ export default function Home() {
                 <div className="relative z-30 w-full max-w-[800px] mx-auto py-5 pb-16 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-4 text-gray-300">
 
                     {/* copyright */}
-                    <div className="flex items-center gap-2 text-m text-white">
+                    <div className="flex items-center gap-2 text-m text-[var(--color-muted)]">
                         <span>Built by John Rothbard with Next.js and Tailwind</span>
                     </div>
 
                     {/* icon linkd */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 text-[var(--color-accent)]">
                         {/* github */}
                         <a href="https://github.com/john-rothbard" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
