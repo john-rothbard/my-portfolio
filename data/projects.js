@@ -15,11 +15,62 @@ const projects = [
         "Clients found the software to expedite workflow",
         "UI/UX pioneered and designed by me"
       ],
-      gallery: ["/seismic1.png", "/seismic2.png"],
+      gallery: ["/simsscreenshot.png", "/simsscreenshot.png"],
       link: "https://github.com/example",
     },
-  
+
     {
+        id: "weathermap",
+        title: "Weather Map",
+        subtitle:"Java full-stack weather map.",
+        image: "/weatherMap1.png",
+        description: `
+          Personally developed a working weather map, integrating realtime weather REST API calls with postgreSQL.
+          Displays a map of my hometown, with a colored heatmap utilizing IDW to interpolate temperature.
+        `,
+        bullets: [
+          "Built with Spring Boot and Java",
+          "PostgreSQL for the backend, openweathermap API, React for the frontend",
+          "Full-stack Realtime Java Application."
+        ],
+        gallery: ["/weatherMap1.png", "/weatherMap2.png"],
+      },
+
+
+      {
+        id: "searchengine",
+        title: "UCI Search Engine",
+        subtitle:"50,000 page search engine.",
+        image: "/searchEngine3.png",
+        description: `
+          Designed and built web search engine, encompassing crawling, indexing, and query processing.
+          Used disk-based indexing for 50,000+ pages with partial merges to efficiently optimize RAM usage.
+        `,
+        bullets: [
+          "Used TF-IDF and weights for ranking results.",
+          ">300ms response times.",
+          "Made with python."
+        ],
+        gallery: ["/searchEngine1.png", "/searchEngine2.png"],
+      },
+
+      {
+        id: "monalisa",
+        title: "'Mona Lisa'",
+        subtitle:"OpenCV facial tracking.",
+        image: "/simsscreenshot.png",
+        description: `
+          Learned alot about OpenCV and made a face/eye/pupil tracking software. Had lots of fun experimenting with this one.
+        `,
+        bullets: [
+          "Made with Python's OpenCV library.",
+          "Real-time facial tracking with DNN face detection + Haar cascade for eyes.",
+          "Looks pretty cool."
+        ],
+        gallery: ["/songvert.png"],
+      }
+
+       /*   {
       id: "songvert",
       title: "Song Converter",
       subtitle:"Spotify -> Soundcloud Fuzzy Finder.",
@@ -34,38 +85,7 @@ const projects = [
         "Runs fully on-device"
       ],
       gallery: ["/songvert.png"],
-    },
-
-    {
-        id: "weathermap",
-        title: "Weather Map",
-        image: "/simsscreenshot.png",
-        description: `
-          Java application full-stack weather map.
-        `,
-        bullets: [
-          "Built with Spring Boot and Java",
-          "PostgreSQL for the backend, openweathermap API, React for the frontend",
-          "Full-stack Realtime Java Application."
-        ],
-        gallery: ["/weathermap.png"],
-      },
-
-      {
-        id: "testing2",
-        title: "Euthanasia",
-        image: "/simsscreenshot.png",
-        description: `
-          Safari extension + iOS app that converts any Apple Music link to the
-          equivalent Spotify track using fuzzy search and API lookups.
-        `,
-        bullets: [
-          "Built with Swift + MusicKit",
-          "Fuzzy matching between AM ↔ Spotify",
-          "Runs fully on-device"
-        ],
-        gallery: ["/songvert.png"],
-      }
+    },*/
   ];
   
   export default projects;

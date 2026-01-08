@@ -10,7 +10,7 @@ export default function ProjectModal({ project, onClose }) {
     return (
         // BACKDROP
         <div
-            className="fixed inset-0 bg-white/20 backdrop-blur-xs z-[999] flex items-center justify-center"
+            className="fixed inset-0 bg-[var(--color-border)]/20 backdrop-blur-xs z-[999] flex items-center justify-center"
             onClick={onClose}
         >
             {/* MODAL */}
@@ -18,14 +18,11 @@ export default function ProjectModal({ project, onClose }) {
                 onClick={stop}
                 className="
           overflow-x-hidden
-          bg-black/90 text-gray
-          border-6 border-white/50
+          bg-[var(--color-bg)] text-[var(--color-text)]
           p-6
-          rounded-4xl
+          rounded-3xl
           relative
           shadow-xl
-          animate-[fadeIn_0.2s_ease-out_forwards]
-          opacity-90
           backdrop-blur-3xl
 
           overflow-y-auto
@@ -50,12 +47,11 @@ export default function ProjectModal({ project, onClose }) {
             >
                 {/* CLOSE BUTTON */}
                 <button
-                    className="absolute top-3 right-3 z-50
+                    className="absolute top-4 right-4 z-50
              px-3 py-1 rounded-md
-             border border-white/40
-             bg-white/10
+             border border-[var(--color-border)]
              text-3xl font-bold
-             hover:bg-white/20 transition"
+             hover:bg-[var(--color-muted)]/20 transition"
                     onClick={onClose}
                 >
                     ×
@@ -66,8 +62,8 @@ export default function ProjectModal({ project, onClose }) {
                     <h1 className="text-3xl sm:text-4xl font-bold">{title}</h1>
                 </div>
 
-                <div className="-mx-6 border-t border-white/20 my-2" />
-                <div className="-mx-6 border-t border-white/20 my-0" />
+                <div className="-mx-6 border-t border-[var(--color-border)]/70 my-2" />
+                <div className="-mx-6 border-t border-[var(--color-border)]/70 my-0" />
 
 
                 {/* CONTENT */}
@@ -75,21 +71,21 @@ export default function ProjectModal({ project, onClose }) {
 
                     {/* DESCRIPTION */}
                     {description && (
-                        <p className="text-gray-200 text-lg leading-relaxed whitespace-pre-line">
+                        <p className="text-[var(--color-text)]/60 text-lg leading-relaxed whitespace-pre-line">
                             {description}
                         </p>
                     )}
-                <div className="border-t border-white/20 border-dashed my-6" />
+                <div className="border-t border-[var(--color-border)]/70 border-dashed my-6" />
 
                     {/* BULLETS */}
                     {bullets && bullets.length > 0 && (
-                        <ul className="list-disc list-inside space-y-2 text-gray-300 text-lg">
+                        <ul className="list-disc list-inside space-y-2 text-[var(--color-text)] text-lg">
                             {bullets.map((b, i) => (
                                 <li key={i}>{b}</li>
                             ))}
                         </ul>
                     )}
-                    <div className="border-t border-white/20 border-dashed my-6" />
+                    <div className="border-t border-[var(--color-border)]/70 border-dashed my-6" />
 
                     {/* GALLERY */}
                     {gallery && gallery.length > 0 && (
@@ -97,13 +93,18 @@ export default function ProjectModal({ project, onClose }) {
                             {gallery.map((src, i) => (
                                 <div
                                     key={i}
-                                    className="relative w-full h-[250px] rounded-lg overflow-hidden"
-                                >
+                                    className="w-full rounded-lg overflow-hidden">
                                     <Image
                                         src={src}
-                                        alt={`${title} image ${i}`}
-                                        fill
-                                        className="object-cover"
+                                        alt={`${title} image ${i}`} //ADD ALT TEXT!
+                                        width={1000}       //arbitrary
+                                        height={1000}      //arbitrary
+                                        className="object-contain"
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                            objectFit: "contain",
+                                        }}
                                     />
                                 </div>
                             ))}
@@ -117,7 +118,7 @@ export default function ProjectModal({ project, onClose }) {
                         className="
                         w-full mt-2
                         py-2 text-l
-                        bg-white/10 border border-white/30
+                        bg-white/10 border border-[var(--color-border)]/70
                         rounded-md
                         hover:bg-white/20
                         transition

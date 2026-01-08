@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 export default function CloudsBackground(props) {
   const [mounted, setMounted] = useState(false);
 
-  // Prevent SSR entirely — avoids hydration mismatches
   useEffect(() => {
     setMounted(true);
   }, []);

@@ -6,9 +6,9 @@ import ThemeToggle from "../components/ThemeToggle"
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-6 left-3 right-4 z-50 max-w-[800px] mx-auto bg-white/30 backdrop-blur-sm border border-white/100 rounded-2xl flex items-center justify-between px-6 py-4 shadow-md">
+    <nav className="fixed top-6 left-3 right-4 z-50 max-w-[800px] mx-auto bg-[var(--color-bg)] backdrop-blur-sm border border-[var(--color-border)] rounded-2xl flex items-center justify-between px-6 py-4 shadow-lg">
 
-      {/* Logo */}
+      {/* LOGO */}
       <div className="flex items-center">
       <Link href="/">
         <Image 
@@ -20,11 +20,11 @@ export default function Navbar() {
       </Link>
       </div>
 
-      {/* Links */}
-      <div className="flex gap-4 text-xl font-light text-white">
+      {/* LINKS */}
+      <div className="flex gap-4 text-xl font-light text-[var(--color-accent)]">
         <a href="/work" className="hover:underline">Work</a>
         <a href="/contact" className="hover:underline">Contact</a>
-        <ThemeToggle />
+        <ThemeToggle/>
       </div>
     </nav>
   );

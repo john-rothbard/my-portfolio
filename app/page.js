@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import MarqueeChip from "../components/MarqueeChip"
 import ProjectModal from "../components/ProjectModal";
 import { useState, useEffect } from "react";
 import projects from "@/data/projects";
@@ -20,7 +19,7 @@ export default function Home() {
   return (
 
 
-    <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden transition-colors duration-200"
+    <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden transition-colors duration-200 selection:bg-[var(--color-border)]"
     style={{background: "var(--page-bg)"}}>
 
 
@@ -37,7 +36,7 @@ export default function Home() {
               alt="My Face"
               width={200}
               height={200}
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover border border-[var(--color-border)]"
             />
           </div>
 
@@ -66,7 +65,7 @@ export default function Home() {
         <div className="flex flex-col items-left gap-3 mt-4 md:hidden">
 
           {/* Software Developer */}
-          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-muted)] text-sm font-medium max-w-[220px] w-max">
+          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-text)]/70 text-sm font-medium max-w-[220px] w-max">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
             </svg>
@@ -74,16 +73,16 @@ export default function Home() {
           </div>
 
           {/* LA-Based */}
-          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-muted)] text-sm font-medium max-w-[180px] w-max">
+          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-text)]/70 text-sm font-medium max-w-[180px] w-max">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22s7-7.117 7-12a7 7 0 10-14 0c0 4.883 7 12 7 12z" />
             </svg>
-            LA-Based
+            LA-Based (for now)
           </div>
 
           {/* Open for work */}
-          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-muted)] text-sm font-medium max-w-[160px] w-max">
+          <div className="flex items-center gap-2 px-3 py-1 bg-[var(--color-card)] rounded-md text-[var(--color-text)]/70 text-sm font-medium max-w-[160px] w-max">
             Open for work
           </div>
 
@@ -103,18 +102,18 @@ export default function Home() {
       </div>
 
       {/*SHEEP*/}
-      <div className="absolute bottom-0 left-0 w-[400px] h-[300px] z-1">
+      <div className="absolute bottom-0 left-0 w-[400px] h-[300px] z-1 opacity-30 lg:opacity-100">
 
         <Image
           src="/shep2.png"
           alt="lamb image"
           fill
-          className="object-cover"
+          className="object-cover hue-rotate-[-5deg]"
           priority
         />
       </div>
       <div className="absolute bottom-11 left-2.5 z-0 max-w-[350px]">
-        <h1 className="text-8xl bg-gradient-to-l from-[rgb(136,198,191)] via-[rgb(33,300,147)] to-[rgb(160,160,190)] bg-clip-text text-transparent"> hello world.... </h1>
+        <h1 className="hidden lg:block text-8xl bg-gradient-to-t from-[#3F9B0B] to-[#89CFF0] bg-clip-text text-transparent"> hello world.... </h1>
       </div>
 
       {/* WORKS SECTION */}
@@ -154,7 +153,7 @@ export default function Home() {
           {/*BOTTOM SECTION*/}
           <a
             href="/work"
-            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
+            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full border border-[var(--color-border)] md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
           >
             See all work
           </a>
@@ -162,7 +161,7 @@ export default function Home() {
           {/* More about me button */}
           <a
             href="/about"
-            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
+            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full border border-[var(--color-border)] md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
           >
             More about me
           </a>
@@ -172,19 +171,19 @@ export default function Home() {
 
         {/* email */}
         <div className="flex items-center gap-2 justify-center md:justify-start mt-4 text-[var(--color-muted)]">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-700" viewBox="0 0 24 24" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="currentColor">
             <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
           </svg>
-          <h3 className="text-xl text-[var(--color-text)]">
+          <h3 className="text-xl text-[var(--color-accent)]">
             jbrothbard@gmail.com
           </h3>
         </div>
 
 
-        <div className="-mx-6 border-t border-white/20 my-5" />
+        <div className="-mx-2 border-t border-[var(--color-border)]/60 my-5" />
 
 
-        <div className="relative z-30 w-full max-w-[800px] mx-auto py-5 pb-16 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-4 text-gray-300">
+        <div className="md:-mx-2 relative z-30 w-full max-w-[800px] py-5 pb-16 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-4 text-gray-300">
 
           {/* copyright */}
           <div className="flex items-center gap-2 text-m text-[var(--color-muted)]">
@@ -192,7 +191,7 @@ export default function Home() {
           </div>
 
           {/* icon linkd */}
-          <div className="flex items-center gap-4 text-[var(--color-accent)]">
+          <div className="md:-mx-3 flex items-center gap-4 text-[var(--color-accent)]">
             {/* github */}
             <a href="https://github.com/john-rothbard" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24">
