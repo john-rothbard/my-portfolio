@@ -48,7 +48,7 @@ const projects = [
         `,
         bullets: [
           "Used TF-IDF and weights for ranking results.",
-          ">300ms response times.",
+          "<300ms response times.",
           "Made with python."
         ],
         gallery: ["/searchEngine1.png", "/searchEngine2.png"],
