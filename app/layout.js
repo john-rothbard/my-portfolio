@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins} from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import ThemeProvider from "../components/ThemeProvider";
@@ -12,6 +12,13 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const poppins = Poppins({
+  weight: '400',
+  variable: "--font-poppins",
+  subsets: ["latin"],
+});
+
 
 export const metadata = {
   title: "John Rothbard's site.",
@@ -39,11 +46,13 @@ export default function RootLayout({ children }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}>
+        <div className = "font-main">
         <ThemeProvider>
           <Navbar />
           {children}
         </ThemeProvider>
+        </div>
       </body>
     </html>
   );

@@ -53,10 +53,8 @@ export default function Home() {
 
             {/* Paragraph ON DESKTOP */}
             <p className="hidden md:block text-xl text-[var(--color-muted)]">
-              I'm a software developer who's wildly interested in all things tech.
-              I especially love the creative intersections of code and art. My dream
-              is to create something that benefits the world, and then create another,
-              and another.
+            I'm a software developer and a recent grad from UC Irvine.
+          I love code + art. Currently creating software that helps people.
             </p>
           </div>
         </div>
@@ -93,10 +91,8 @@ export default function Home() {
         <br></br>
         <h2 className="block md:hidden text-lg text-[var(--color-text)] font-bold">About me</h2>
         <p className="block md:hidden text-xl text-[var(--color-muted)] mt-3">
-          I'm a software developer who's wildly interested in all things tech.
-          I especially love the creative intersections of code and art. My dream
-          is to create something that benefits the world, and then create another,
-          and another.
+          I'm a software developer and 2025 graduate from The University of California, Irvine.
+          I love code + art. Currently creating software that helps people.
         </p>
 
       </div>
@@ -119,7 +115,7 @@ export default function Home() {
       {/* WORKS SECTION */}
       <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10">
 
-        <h2 className="text-xl mb-4 text-[var(--color-text)]">
+        <h2 className="text-xl font-semibold mb-4 text-[var(--color-text)]">
           Please consider the following:
         </h2>
 
