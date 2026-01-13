@@ -45,7 +45,7 @@ export default function Home() {
                     Work
                 </h2>
                 <h2 className="text-xl mb-4 text-[var(--color-muted)]">
-                    Please consider the following:
+                    Here's some things I've made:
                 </h2>
 
 
@@ -79,7 +79,7 @@ export default function Home() {
                     {/*BOTTOM SECTION*/}
                     <a
                         href="/"
-                        className="flex-none block bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full md:w-[200px] hover:bg-[var(--color-border)] transition"
+                        className="flex-none rounded-md border border-[var(--color-border)] block bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-l w-full md:w-[200px] hover:bg-[var(--color-border)] transition"
                     >
                         Home
                     </a>

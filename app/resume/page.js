@@ -33,39 +33,21 @@ export default function Home() {
                     priority
                 />
             </div>
-            <div className="absolute bottom-11 left-2.5 z-0 max-w-[500px]">
-                <h1 className="hidden lg:block text-8xl bg-gradient-to-l from-[rgb(136,198,191)] via-[rgb(33,300,147)] to-[rgb(160,160,190)] bg-clip-text text-transparent"> nowhere but here </h1>
-            </div>
 
-            {/* CONTACT ME */}
+            {/* RESUME */}
             <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10">
                 <h2 className="text-4xl mb-2 font-bold text-[var(--color-text)]">
-                    Chat
-                </h2>
-                <h2 className="text-xl mb-4 text-[var(--color-muted)]">
-                    If you'd like to reach out:
+                    Resume
                 </h2>
                 <div className="flex flex-col relative z-30 max-w-[800px] mx-auto px-0">
-                    {/* buttons */}
-                    <div className="flex flex-col sm:flex-row sm:gap-x-4 gap-y-4">
-                        <a className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-md border border-[var(--color-border)] w-fit hover:scale-99 transition">
-                            jbrothbard@gmail.com
-                        </a>
-                        <a href="https://linkedin.com/in/johnrothbard" className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-md border border-[var(--color-border)] w-fit hover:bg-[var(--color-border)] transition">
-                            LinkedIn
-                        </a>
-                    </div>
 
-                    {/* Image */}
+                    {/* pdf */}
                     <div className="w-full mt-4 py-4">
-                        <Image
-                            src="/simsscreenshot.png"
-                            alt="earthquake vis software."
-                            width={800}   // natural width
-                            height={100}
-                            className="object-cover"
-                            priority
-                        />
+                    <iframe
+                        src="/resume.pdf"
+                        className="w-full aspect-[8.5/12] border border-[var(--color-border)] rounded-lg"
+                        title="Resume PDF"
+                    />
                     </div>
                 </div>
 
@@ -119,17 +101,6 @@ export default function Home() {
 
 </div>
             </div>
-                
-
-
-
-            {/*listens for whenever project gets clicked n updates the modal*/}
-            {activeProject && (
-                <ProjectModal
-                    project={activeProject}
-                    onClose={() => setActiveProject(null)}
-                />
-            )}
 
         </div>
 

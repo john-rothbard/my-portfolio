@@ -12,6 +12,7 @@
   --border: #9fd3fd;
   /*--accent: #3296e9; */
   --accent: #658ce7;
+  --logo-filter: saturate(10) sepia(3) brightness(0.8) hue-rotate(145deg);
 }
 
 
@@ -25,6 +26,7 @@
   --card:   #25212a; 
   --border: #3f3a4a; 
   --accent: #7c7ab8; 
+  --logo-filter: saturate(2) sepia(3) brightness(0.8) hue-rotate(190deg);
 }
 
 @theme inline {
@@ -35,6 +37,7 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --font-main: var(--font-poppins);
+  --logo-filter: var(--logo-filter);
 }
 
 body {

@@ -41,7 +41,7 @@ export default function Home() {
           </div>
 
           {/* right side */}
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col mx-1 my-1">
 
             {/* Heading */}
             <h1 className="text-4xl md:text-4xl font-bold text-[var(--color-text)] mb-2 transition-colors duration-200">
@@ -149,17 +149,17 @@ export default function Home() {
           {/*BOTTOM SECTION*/}
           <a
             href="/work"
-            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full border border-[var(--color-border)] md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
+            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-md w-full border border-[var(--color-border)] md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
           >
             See all work
           </a>
 
           {/* More about me button */}
           <a
-            href="/about"
-            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-0xl w-full border border-[var(--color-border)] md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
+            href="/resume"
+            className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-md w-full border border-[var(--color-border)] md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"
           >
-            More about me
+            My Resume
           </a>
 
         </div>
