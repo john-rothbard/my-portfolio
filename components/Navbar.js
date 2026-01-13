@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="flex items-center rounded -mx-2">
       <Link href="/">
         <Image 
-          src="/JRLogoWhite.png" 
+          src="/logo.png" 
           alt="Logo" 
           width={44} 
           height={44}
