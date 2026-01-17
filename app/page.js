@@ -24,7 +24,7 @@ export default function Home() {
 
 
       {/* HI AND ABOUT ME */}
-      <div className="relative z-30 max-w-[800px] mx-auto px-4 top-30">
+      <div className="relative z-30 max-w-[800px] mx-auto px-4 top-30 slide-in-right">
 
         {/* image + heading */}
         <div className="flex flex-row items-start gap-4">
@@ -76,7 +76,7 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22s7-7.117 7-12a7 7 0 10-14 0c0 4.883 7 12 7 12z" />
             </svg>
-            LA-Based (for now)
+            LA-Based
           </div>
 
           {/* Open for work */}
@@ -113,7 +113,7 @@ export default function Home() {
       </div>
 
       {/* WORKS SECTION */}
-      <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10">
+      <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10 slide-in-right">
 
         <h2 className="text-xl font-semibold mb-4 text-[var(--color-text)]">
           Please consider the following:
@@ -142,11 +142,13 @@ export default function Home() {
             </div>
           ))}
         </div>
+        </div>
 
+
+        {/*BOTTOM SECTION*/}
+        <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 mt-10">
 
         <div className="relative z-30 max-w-[800px] mx-auto px-0 py-8 flex flex-col md:flex-row gap-3 justify-left">
-
-          {/*BOTTOM SECTION*/}
           <a
             href="/work"
             className="bg-[var(--color-card)] text-[var(--color-text)] text-center py-2 px-6 rounded-md w-full border border-[var(--color-border)] md:w-[200px] hover:bg-[var(--color-border)] transition-colors duration-200"

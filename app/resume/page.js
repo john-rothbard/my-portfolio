@@ -21,21 +21,8 @@ export default function Home() {
 
         <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden">
 
-
-            {/*SHEEP*/}
-            <div className="absolute bottom-0 left-0 w-[400px] opacity-20 lg:opacity-100 h-[300px] z-1">
-
-                <Image
-                    src="/lambmunch.png"
-                    alt="lamb image"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-            </div>
-
             {/* RESUME */}
-            <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10">
+            <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10 slide-in-right">
                 <h2 className="text-4xl mb-2 font-bold text-[var(--color-text)]">
                     Resume
                 </h2>

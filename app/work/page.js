@@ -40,7 +40,7 @@ export default function Home() {
             </div>
 
             {/* WORKS SECTION */}
-            <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10">
+            <div className="relative z-30 w-full max-w-[800px] mx-auto px-4 pt-20 mt-10 slide-in-right">
                 <h2 className="text-4xl mb-2 font-bold text-[var(--color-text)]">
                     Work
                 </h2>

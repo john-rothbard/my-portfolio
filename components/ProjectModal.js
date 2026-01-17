@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function ProjectModal({ project, onClose }) {
@@ -8,61 +8,80 @@ export default function ProjectModal({ project, onClose }) {
 
     const { title, description, bullets, gallery } = project;
 
-    // ---- swipe state ----
     const startY = useRef(0);
     const scrollTopAtStart = useRef(0);
     const [offsetY, setOffsetY] = useState(0);
     const [dragging, setDragging] = useState(false);
     const dragY = useRef(0);
 
+    const [isMobile, setIsMobile] = useState(false);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const mq = window.matchMedia("(max-width: 600px)");
+
+        const update = () => setIsMobile(mq.matches);
+        update();
+
+        mq.addEventListener("change", update);
+        requestAnimationFrame(() => setVisible(true));
+
+        return () => mq.removeEventListener("change", update);
+    }, []);
 
     const CLOSE_THRESHOLD = 30;
 
+    function beginClose() {
+        setVisible(false);
+        setTimeout(onClose, 250);
+    }
+
     function onPointerDown(e) {
-        if (window.innerWidth > 600) return;
-    
+        if (!isMobile) return;
+
         startY.current = e.clientY;
         scrollTopAtStart.current = e.currentTarget.scrollTop;
         dragY.current = 0;
-    
+
         setDragging(true);
         e.currentTarget.setPointerCapture(e.pointerId);
     }
-    
+
     function onPointerMove(e) {
         if (!dragging) return;
-    
+
         const delta = e.clientY - startY.current;
-    
+
         if (delta > 0 && scrollTopAtStart.current === 0) {
             e.preventDefault();
-    
-            dragY.current = delta;   
-            setOffsetY(delta);      
+            dragY.current = delta;
+            setOffsetY(delta);
         }
     }
-    
+
     function onPointerUp(e) {
         if (!dragging) return;
-    
+
         setDragging(false);
         e.currentTarget.releasePointerCapture(e.pointerId);
-    
+
         if (dragY.current > CLOSE_THRESHOLD) {
-            onClose();
+            beginClose();
         } else {
             dragY.current = 0;
             setOffsetY(0);
         }
     }
-    
+
+    const translateY = isMobile
+        ? (visible ? 0 : 80) + offsetY
+        : offsetY;
+
     return (
-        // BACKDROP
         <div
             className="fixed inset-0 bg-[var(--color-border)]/20 backdrop-blur-xs z-[999] flex items-center justify-center"
-            onClick={onClose}
+            onClick={beginClose}
         >
-            {/* MODAL */}
             <div
                 onClick={stop}
                 onPointerDown={onPointerDown}
@@ -77,12 +96,9 @@ export default function ProjectModal({ project, onClose }) {
                     relative
                     shadow-xl
                     backdrop-blur-3xl
-
                     overflow-y-auto
-
                     w-[75vw]
                     h-[90vh]
-
                     max-[600px]:rounded-none
                     max-[600px]:rounded-t-2xl
                     max-[600px]:top-[5vh]
@@ -98,24 +114,29 @@ export default function ProjectModal({ project, onClose }) {
                     flex flex-col
                 "
                 style={{
-                    transform: `translateY(${offsetY}px)`,
-                    transition: dragging ? "none" : "transform 0.25s ease",
+                    transform: isMobile
+                        ? `translateY(${translateY}px)`
+                        : `
+                            translateY(${translateY}px)
+                            scale(${visible ? 1 : 0.95})
+                        `,
+                    opacity: visible ? 1 : 0,
+                    transition: dragging
+                        ? "none"
+                        : "transform 0.25s ease, opacity 0.2s ease",
                 }}
             >
-
-                {/* CLOSE BUTTON */}
                 <button
                     className="absolute top-4 right-4 z-50
                         px-3 py-1 rounded-md
                         border border-[var(--color-border)]
                         text-3xl font-bold
                         hover:bg-[var(--color-muted)]/20 transition"
-                    onClick={onClose}
+                    onClick={beginClose}
                 >
                     ×
                 </button>
 
-                {/* TITLE */}
                 <div className="mb-6 pt-2">
                     <h1 className="text-3xl sm:text-4xl font-bold">{title}</h1>
                 </div>
@@ -123,7 +144,6 @@ export default function ProjectModal({ project, onClose }) {
                 <div className="-mx-6 border-t border-[var(--color-border)]/70 my-2" />
                 <div className="-mx-6 border-t border-[var(--color-border)]/70 my-0" />
 
-                {/* CONTENT */}
                 <div className="space-y-8 pb-20">
                     {description && (
                         <p className="text-[var(--color-text)]/60 text-lg leading-relaxed whitespace-pre-line">
@@ -162,7 +182,7 @@ export default function ProjectModal({ project, onClose }) {
                 </div>
 
                 <button
-                    onClick={onClose}
+                    onClick={beginClose}
                     className="
                         w-full mt-2
                         py-2 text-l
