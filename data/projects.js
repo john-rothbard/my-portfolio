@@ -15,7 +15,7 @@ const projects = [
         "Clients found the software to expedite workflow",
         "UI/UX pioneered and designed by me"
       ],
-      gallery: ["/simsscreenshot.png", "/simsscreenshot.png"],
+      gallery: ["/simsscreenshot.png"],
       link: "https://github.com/example",
     },
 
@@ -52,9 +52,9 @@ const projects = [
           "Made with python."
         ],
         gallery: ["/searchEngine1.png", "/searchEngine2.png"],
-      },
+      }
 
-      {
+     /* {
         id: "monalisa",
         title: "'Mona Lisa'",
         subtitle:"OpenCV facial tracking.",
@@ -70,7 +70,7 @@ const projects = [
         gallery: ["/songvert.png"],
       }
 
-       /*   {
+       {
       id: "songvert",
       title: "Song Converter",
       subtitle:"Spotify -> Soundcloud Fuzzy Finder.",
