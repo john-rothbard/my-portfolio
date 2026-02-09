@@ -91,12 +91,13 @@ export default function ProjectModal({ project, onClose }) {
                 className="
                     overflow-x-hidden
                     bg-[var(--color-bg)] text-[var(--color-text)]
-                    p-6
+                    px-6
                     rounded-3xl
                     relative
                     shadow-xl
                     backdrop-blur-3xl
                     overflow-y-auto
+                    overscroll-contain
                     w-[75vw]
                     h-[90vh]
                     max-[600px]:rounded-none
@@ -109,7 +110,6 @@ export default function ProjectModal({ project, onClose }) {
                     max-[600px]:max-h-[90vh]
                     max-[600px]:h-auto
                     max-[600px]:border-0
-                    max-[600px]:p-4
                     max-[600px]:overflow-y-auto
                     flex flex-col
                 "
@@ -126,9 +126,10 @@ export default function ProjectModal({ project, onClose }) {
                         : "transform 0.25s ease, opacity 0.2s ease",
                 }}
             >
+                <div className="sticky top-0 bg-[var(--color-bg)] pt-3 ">
                 <button
-                    className="absolute top-4 right-4 z-50
-                        px-3 py-1 rounded-md
+                    className="absolute top-2 right-0 z-50 top-4
+                        px-3 py-1 rounded-md -mx-2
                         border border-[var(--color-border)]
                         text-3xl font-bold
                         hover:bg-[var(--color-muted)]/20 transition"
@@ -137,12 +138,12 @@ export default function ProjectModal({ project, onClose }) {
                     ×
                 </button>
 
-                <div className="mb-6 pt-2">
+                <div className="mb-6 pt-3">
                     <h1 className="text-3xl sm:text-4xl font-bold">{title}</h1>
                 </div>
-
-                <div className="-mx-6 border-t border-[var(--color-border)]/70 my-2" />
                 <div className="-mx-6 border-t border-[var(--color-border)]/70 my-0" />
+                </div>
+
 
                 <div className="space-y-8 pb-20">
                     {description && (

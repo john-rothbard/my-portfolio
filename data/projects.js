@@ -7,7 +7,7 @@ const projects = [
       subtitle:"Developed a 0-1 enterprise application.",
       image: "/simsscreenshot.png",
       description: `
-        I worked in dedicated team to build an enterprise-grade software application for KPFF, an engineering firm.
+        I worked in a dedicated team to build an enterprise-grade software application for KPFF, an engineering firm.
         I was the head of the UI/UX, as well as backend work for camera implementation and data graphing.
       `,
       bullets: [
@@ -23,17 +23,17 @@ const projects = [
         id: "weathermap",
         title: "Weather Map",
         subtitle:"Java full-stack weather map.",
-        image: "/weatherMap1.png",
+        image: "/weatherMap4.png",
         description: `
-          Personally developed a working weather map, integrating realtime weather REST API calls with postgreSQL.
-          Displays a map of my hometown, with a colored heatmap utilizing IDW to interpolate temperature.
+          Personally developed a realtime weather map, integrating REST API data ingestion into a postgreSQL database.
+          Pulls data from US cities, showcased with a heatmap utilizing IDW to interpolate temperature -> color.
         `,
         bullets: [
           "Built with Spring Boot and Java",
           "PostgreSQL for the backend, openweathermap API, React for the frontend",
           "Full-stack Realtime Java Application."
         ],
-        gallery: ["/weatherMap1.png", "/weatherMap2.png"],
+        gallery: ["/weatherMap3.png", "/weatherMap2.png"],
       },
 
 
@@ -41,7 +41,7 @@ const projects = [
         id: "searchengine",
         title: "UCI Search Engine",
         subtitle:"50,000 page search engine.",
-        image: "/searchEngine3.png",
+        image: "/searchengine6.png",
         description: `
           Designed and built web search engine, encompassing crawling, indexing, and query processing.
           Used disk-based indexing for 50,000+ pages with partial merges to efficiently optimize RAM usage.
@@ -51,7 +51,7 @@ const projects = [
           "<300ms response times.",
           "Made with python."
         ],
-        gallery: ["/searchEngine1.png", "/searchEngine2.png"],
+        gallery: ["/searchEngine8.png", "/searchEngine1.png"],
       }
 
      /* {
