@@ -41,7 +41,7 @@ const projects = [
         id: "searchengine",
         title: "UCI Search Engine",
         subtitle:"50,000 page search engine.",
-        image: "/searchengine6.png",
+        image: "/searchEngine6.png",
         description: `
           Designed and built web search engine, encompassing crawling, indexing, and query processing.
           Used disk-based indexing for 50,000+ pages with partial merges to efficiently optimize RAM usage.
