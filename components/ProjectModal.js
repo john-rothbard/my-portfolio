@@ -145,7 +145,7 @@ export default function ProjectModal({ project, onClose }) {
                 </div>
 
 
-                <div className="space-y-8 pb-20">
+                <div className="space-y-8 pb-8">
                     {description && (
                         <p className="text-[var(--color-text)]/60 text-lg leading-relaxed whitespace-pre-line">
                             {description}
@@ -185,11 +185,11 @@ export default function ProjectModal({ project, onClose }) {
                 <button
                     onClick={beginClose}
                     className="
-                        w-full mt-2
+                        w-full mt-2 mb-8 max-[600px]:mb-16
                         py-2 text-l
-                        bg-white/10 border border-[var(--color-border)]/70
+                        bg-[var(--color-card)]/90 border border-[var(--color-border)]/70
                         rounded-md
-                        hover:bg-white/20
+                        hover:bg-[var(--color-border)]/50
                         transition
                     "
                 >
